@@ -13,7 +13,7 @@ urlpatterns = [
     path('tags/<int:pk>', views.TagView.as_view(), name='post.tag'),
     path('mdeditor/', include('mdeditor.urls')),
     path('about/', views.about, name="about"),
-    # path('search', views.search, name="search"),
+    path('search', views.search, name="search"),
 
 ]
 

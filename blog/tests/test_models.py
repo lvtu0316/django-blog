@@ -25,7 +25,7 @@ class TagModelTestCase(TestCase):
 
 class PostModelTestCase(TestCase):
     def setUp(self):
-        apps.get_app_config('haystack').signal_processor.teardown()
+        # apps.get_app_config('haystack').signal_processor.teardown()
         user = User.objects.create_superuser(
             username='admin',
             email='123456@qq.com',
@@ -71,7 +71,7 @@ class PostModelTestCase(TestCase):
 
 class SearchIndexesTestCase(TestCase):
     def setUp(self):
-        apps.get_app_config("haystack").signal_processor.teardown()
+        # apps.get_app_config("haystack").signal_processor.teardown()
         user = User.objects.create_superuser(
             username="admin", email="admin@hellogithub.com", password="admin"
         )
