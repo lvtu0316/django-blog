@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from blog.models import Category, Post, Tag
-from blog.search_indexes import PostIndex
+# from blog.search_indexes import PostIndex
 
 
 class CategoryModelTestCase(TestCase):

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'comments.apps.CommentsConfig',
     'mdeditor',
     'pure_pagination',
-    'haystack',
+    # 'haystack',
 ]
 
 MIDDLEWARE = [
@@ -134,13 +134,13 @@ MEDIA_URL = '/media/'   #你上传的文件和图片会默认存在/uploads/edit
 
 
 # 搜索设置
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'blog.elasticsearch2_ik_backend.Elasticsearch2IkSearchEngine',
-        'URL': 'http://192.168.1.73:9200/',
-        'INDEX_NAME': 'haystack',
-    },
-}
-HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'blog.elasticsearch2_ik_backend.Elasticsearch2IkSearchEngine',
+#         'URL': 'http://192.168.1.73:9200/',
+#         'INDEX_NAME': 'haystack',
+#     },
+# }
+# HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # HAYSTACK_CONNECTIONS['default']['URL'] = 'http://192.168.1.73:9200/'
