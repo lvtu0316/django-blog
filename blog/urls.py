@@ -2,6 +2,8 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 from django.conf import settings
+from django.views.generic import RedirectView
+
 from . import views
 
 app_name = 'blog'
@@ -14,6 +16,7 @@ urlpatterns = [
     path('mdeditor/', include('mdeditor.urls')),
     path('about/', views.about, name="about"),
     path('search', views.search, name="search"),
+    path("favicon.ico", RedirectView.as_view(url='static/favicon.ico')),
 
 ]
 
