@@ -102,5 +102,9 @@ class Post(models.Model):
     def rich_content(self):
         return generate_rich_content(self.body)
 
+    @property
+    def comment_count(self):
+        comment_count = self.comment_set.filter(status=1).count()
+        return comment_count
 
 
